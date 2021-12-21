@@ -271,28 +271,36 @@ textarea {
    NAV
 ========================================================================== */
 nav {
-  grid-area: nav;
   background: white;
   position: fixed;
   width: 100%;
 }
 
-ul {
+nav ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: 0px;
 }
 
-li {
+nav li {
   text-decoration: none;
   list-style: none;
 }
 
-li a {
+nav li a {
   text-decoration: none;
   color: #141414;
   font-size: 1.2em;
+}
+
+nav li:hover {
+  transform: scale(105%);
+  transition-duration: 0.7s;
+}
+
+nav li a:hover {
+  color: #BF8C8C;
 }
 
 .contact-button {
@@ -302,6 +310,10 @@ li a {
   text-align: center;
 }
 
+.contact-button a:hover {
+  color: white;
+}
+
 .contact-button a {
   color: #fff;
 }
@@ -309,8 +321,7 @@ li a {
 /* ==========================================================================
    MAIN
 ========================================================================== */
-main {
-  grid-area: main;
+.home-main {
   height: 100vh;
   background: url(/Users/sinabrauch/Documents/workspace/repository/baby-pics/img/home-hero_bw.jpg) 30% no-repeat fixed;
   display: flex;
@@ -328,7 +339,7 @@ main {
 }
 
 .hero-button {
-  background: transparent;
+  background: white;
   border: 1px solid #BF8C8C;
   border-radius: 2em;
   text-align: center;
@@ -336,6 +347,15 @@ main {
   font-size: 0.5em;
   padding: 0.7em;
 }
+
+.hero-button:hover {
+  background: #BF8C8C;
+  color: white;
+  transform: scale(105%);
+  transition-duration: 0.7s;
+}
+
+
 
 /* ==========================================================================
    CONTENT
@@ -371,35 +391,56 @@ h3 {
   padding-bottom: 5em;
 }
 
-.container-home-prez h2 {
+.container-home-prez h2, .container-home-price h2, .container-home-blog h2, .container-studio-prez h2, .container-price-right h2 .main-blog h2 {
   grid-area: h2;
 }
 
 .home-prez-img {
   grid-area: home-prez-img;
-  justify-self: right;
   filter: grayscale(50%);
-  padding: 1em;
+  text-align: center;
 }
 
 .home-prez-img img {
-  height: 30em;
+  width: 70%;
 }
 
 .home-prez-text {
   grid-area: home-prez-text;
-  width: 50em;
-  padding-left: 3em;
+  width: 80%;
   text-align: justify;
 }
 
 .empty-button {
   background: transparent;
-  border: 2px solid #BF8C8C;
+  border: 0.1em solid #BF8C8C;
   border-radius: 2em;
   padding: 0.6em 1em;
   color: #BF8C8C;
-  margin: 1em 0em;
+  margin: 0em 0em 2em 0em;
+}
+
+.empty-button:hover {
+  color: white;
+  background: #BF8C8C;
+  transform: scale(105%);
+  transition-duration: 0.7s;
+}
+
+.filled-button {
+  background: #BF8C8C;
+  border: 0.1em solid #BF8C8C;
+  border-radius: 2em;
+  padding: 0.6em 1em;
+  color: white;
+  margin: 2em 0em;
+}
+
+.filled-button:hover {
+  background: white;
+  color: #BF8C8C;
+  transform: scale(105%);
+  transition-duration: 0.7s;
 }
 
 .container-home-price {
@@ -410,10 +451,6 @@ h3 {
   "h2 h2 h2"
   "price-pregnancy price-newborn price-baby";
   text-align: center;
-}
-
-.container-home-price h2 {
-  grid-area: h2;
 }
 
 .container-home-price p {
@@ -437,13 +474,452 @@ h3 {
 
 .container-home-price img {
   width: 100%;
+}
+
+.container-home-blog {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 0.6fr 0.6fr;
+  grid-template-areas: 
+  "h2"
+  "home-blog-article1"
+  "home-blog-article2";
+  margin: 0em 10em 6em;
+  row-gap: 2em;
+}
+
+.home-blog-article1 {
+  border: 0.2em solid #BF8C8C;
+  grid-area: home-blog-article1;
+  display: flex;
+  justify-self: space-around;
+  margin-top: -3em;
+}
+
+.home-blog-article2 {
+  border: 0.2em solid #BF8C8C;
+  grid-area: home-blog-article2;
+  display: flex;
+}
+
+.container-home-blog img {
+  width: 140%;
+}
+
+.home-blog-text {
+  margin: 0em 1em 0em 7em;
+}
+
+/* STUDIO */
+
+.studio-main {
+  height: 100vh;
+  background: url(/Users/sinabrauch/Documents/workspace/repository/baby-pics/img/studio-hero_bw.jpg) 30% no-repeat fixed;
+  display: flex;
+  justify-content: flex-start;
+}  
+
+.studio-main-text {
+  width: 33em;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  line-height: 2em;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 3em;
+}
+
+.studio-hero-button {
+  background: transparent;
+  border: 1px solid #BF8C8C;
+  border-radius: 2em;
+  text-align: center;
+  color: #BF8C8C;
+  padding: 0.7em 1em;
+  margin-top: 1.5em;
+}
+
+.studio-hero-button:hover {
+  transform: scale(105%);
+  transition-duration: 0.7s;
+}
+
+.studio-hero-button a:hover {
+  color: white;
+  background: #BF8C8C;
+}
+
+.container-studio-prez {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 0.2fr 1fr;
+  grid-template-areas: 
+  "h2 h2"
+  "home-studio-text home-studio-img";
+  margin-bottom: 5em;
+  border: 0.2em solid #BF8C8C;
+  margin: 3em;
+  padding-bottom: 5em;
+}
+
+.home-studio-img {
+  grid-area: home-studio-img;
+  filter: grayscale(20%);
+  text-align: center;
+}
+
+.home-studio-img img {
+  width: 30vh;
+  margin: 0.2em;
+}
+
+.home-studio-text {
+  grid-area: home-studio-text;
+  text-align: right;
+  margin: -1em 1em 0em 2em;
+}
+
+.google-maps-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.google-maps {
+  text-align: center;
+}
+
+.address {
+  display: flex;
+  width: 10vw;
+  flex-wrap: wrap;
+}
+
+/* GALERIE */
+
+.gallery-page-container {
+  background: linear-gradient(180deg, #BF8C8C, white);
+}
+
+.selector {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 3em;
+}
+
+.gallery-main h2 {
+  border: 0.1em solid white;
+  border-radius: 0.1em;
+  padding: 0.5em 1em;
+  width: 4em;
+  height: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-main {
+  height: 45vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.gallery-container {
+  width: 80%;
+  margin: auto;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(8, 0.5fr);
+  grid-template-rows: repeat(8, 1fr);
+  column-gap: 1em;
+  row-gap: 1em;
+}
+
+.gallery img{
+  object-fit: cover;
+  width: 100%;
+  display: block;
+  border: 0.2em solid white;
+}
+
+.figure1 {
+  grid-column: 1/4;
+  grid-row: 1/5;
+}
+
+.figure2 {
+  grid-column: 5/9;
+  grid-row: 1/4;
+}
+
+.figure3 {
+  grid-column: 1/3;
+  grid-row: 3/5;
+}
+
+.figure4 {
+  grid-column: 5/8;
+  grid-row: 3/7;
+}
+
+.figure5 {
+  grid-column: 5/9;
+  grid-row: 2/5;
+}
+
+.figure6 {
+  grid-column: 1/3;
+  grid-row: 4/7;
+}
+
+/* PRESTATIONS */
+
+.container-price-right {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 0.2fr 1fr;
+  grid-template-areas: 
+  "h2 h2"
+  "price-text-left price-img-right";
+}
+
+.container-price-right h2 {
+  padding-top: 1.5em;
+}
+
+.price-img-right {
+  grid-area: price-img-right;
+  filter: grayscale(20%);
+  text-align: center;
+}
+
+.price-img-right img {
+  width: 30vh;
+  margin: 0.2em;
+}
+
+.price-text-left {
+  grid-area: price-text-left;
+  text-align: right;
+  margin: -1em 1em 0em 2em;
+}
+
+.container-price-left {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 0.2fr 1fr;
+  grid-template-areas: 
+  "h2 h2"
+  "price-img-left price-text-right";
+  margin-bottom: 5em;
+  padding-bottom: 5em;
+}
+
+.price-img-left {
+  grid-area: price-img-left;
+  filter: grayscale(20%);
+  text-align: center;
+}
+
+.price-img-left img {
+  width: 30vh;
+  margin: 0.2em;
+}
+
+.price-text-right {
+  grid-area: price-text-right;
+  text-align: left;
+  margin: -1em 1em 0em 2em;
+}
+
+.price-table {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0.2fr 1fr;
+  grid-template-areas: 
+  "h2 h2 h2"
+  "price-article1 price-article2 price-article3";
+  text-align: center;
+  height: 100vh;
+  margin-bottom: 7em;
+}
+
+.price-table h2 {
+  grid-area: h2;
+}
+
+.price-table img {
   width: 100%;
 }
+
+.price-article1 {
+  grid-area: price-article1;
+  margin: 0em 2.5em;
+  border: 0.2em solid #BF8C8C;
+}
+
+.price-article2 {
+  grid-area: price-article2;
+  margin: 0em 2.5em;
+  border: 0.2em solid #BF8C8C;
+}
+
+.price-article3 {
+  grid-area: price-article3;
+  margin: 0em 2.5em;
+  border: 0.2em solid #BF8C8C;
+}
+
+.price-article-list {
+  text-align: left;
+}
+
+.price {
+  background: #BF8C8C;
+  color: white;
+  padding: 0.8em;
+}
+
+/* BLOG */
+
+.blog-container {
+  display: grid;
+  grid-template-columns: 4fr 1.3fr;
+  grid-template-rows: 45vh 2fr;
+  grid-template-areas: 
+  "main-blog main-blog"
+  "blog-table aside";
+  text-align: center;
+  margin-bottom: 7em;
+}
+
+.main-blog {
+  background: url(/Users/sinabrauch/Documents/workspace/repository/baby-pics/img/blog.jpeg) 1% fixed;
+  padding-top: 8em;
+  grid-area: main-blog;
+}
+
+aside {
+  grid-area: aside;
+  text-align: left;
+  padding: 10%;
+  background: #FAF1F0;
+  height: 213vh;
+}
+
+aside h4 {
+  color:#BF8C8C;
+}
+
+.blog-table {
+  grid-area: blog-table;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  height: 200vh;
+  margin-bottom: 7em;
+  justify-content: center;
+}
+
+.blog-article {
+  border: 0.2em solid #BF8C8C;
+  margin: 2em 2em 0em 2em;
+  text-align: center;
+}
+
+.blog-article img {
+  width: 100%;
+}
+
+.blog-article p {
+  padding: 1em;
+}
+
+/* CONTACT */
+.main-contact {
+  padding-top: 8em;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 60%;
+}
+
+form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 60%;
+  border: 0.2em solid #BF8C8C;
+  padding: 2em;
+  margin-top: 2em;
+  }
+
+  form div {
+    width: 100%;
+    padding: 0.5em;
+  }
+
+  .form-element {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .radio label {
+    margin-right: 1em;
+  }
 
 /* ==========================================================================
    FOOTER
 ========================================================================== */
 
 footer {
-  background-color: orange;
+  text-align: center;
+  background: #BF8C8C;
+  color: white;
+  padding: 1em;
+  display: flex;
+  justify-content: space-around;
+  margin: 3em -3em;
 }
+
+.footer-address {
+  filter: brightness(0) invert(1);
+  flex-wrap: wrap;
+  text-align: left;
+  width: 30vh;
+  padding-bottom: 1.5em;
+}
+
+.footer-copyright {
+  display: flex;
+  align-self: flex-end;
+  justify-self: center;
+}
+
+.footer-social {
+  filter: brightness(0) invert(1);
+  display: flex;
+  justify-content: center;
+}
+
+.footer-social img {
+  padding: 1em;
+}
+
+/*.button-up {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.up {
+
+}*/
