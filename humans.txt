@@ -7,7 +7,7 @@
 
 # THANKS
 
-    <name>
+    Thanks to Pexels, google fonts, flaticon and Julien.
 
 # TECHNOLOGY COLOPHON
 
