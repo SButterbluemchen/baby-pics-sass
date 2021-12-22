@@ -354,7 +354,7 @@ a {
 ========================================================================== */
 .home-main {
   height: 100vh;
-  background: url(/Users/sinabrauch/Documents/workspace/repository/baby-pics/img/home-hero_bw.jpg) 30% no-repeat fixed;
+  background: url(img/home-hero_bw.jpg) 30% no-repeat fixed;
   display: flex;
   justify-content: flex-end;
 }  
@@ -551,7 +551,7 @@ h3 {
 
 .studio-main {
   height: 100vh;
-  background: url(/Users/sinabrauch/Documents/workspace/repository/baby-pics/img/studio-hero_bw.jpg) 30% no-repeat fixed;
+  background: url(img/studio-hero_bw.jpg) 30% no-repeat fixed;
   display: flex;
   justify-content: flex-start;
 }  
@@ -862,7 +862,7 @@ h3 {
 }
 
 .main-blog {
-  background: url(/Users/sinabrauch/Documents/workspace/repository/baby-pics/img/blog.jpeg) 1% fixed;
+  background: url(img/blog.jpeg) 1% fixed;
   padding-top: 8em;
   grid-area: main-blog;
 }
@@ -943,7 +943,7 @@ form {
 
 .about-main {
   height: 100vh;
-  background: url(/Users/sinabrauch/Documents/workspace/repository/baby-pics/img/photo-home-about.jpeg) 100% no-repeat fixed;
+  background: url(img/photo-home-about.jpeg) 100% no-repeat fixed;
   background-size: cover;
   background-position: 0% 30%;
   display: flex;
