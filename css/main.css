@@ -352,9 +352,10 @@ a {
 /* ==========================================================================
    MAIN
 ========================================================================== */
+
 .home-main {
   height: 100vh;
-  background: url(img/home-hero_bw.jpg) 30% no-repeat fixed;
+  background: url(../img/home-hero_bw.jpg) 30% no-repeat fixed;
   display: flex;
   justify-content: flex-end;
 }  
@@ -551,7 +552,7 @@ h3 {
 
 .studio-main {
   height: 100vh;
-  background: url(img/studio-hero_bw.jpg) 30% no-repeat fixed;
+  background: url(../img/studio-hero_bw.jpg) 30% no-repeat fixed;
   display: flex;
   justify-content: flex-start;
 }  
