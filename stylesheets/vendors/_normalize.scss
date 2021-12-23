@@ -8,7 +8,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
-html {
+ html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -40,15 +40,6 @@ main {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
-}
-
-figure {
-  margin: 0px;
-  display: block;
-  margin-block-start: 0em;
-  margin-block-end: 0em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
 }
 
 /* Grouping content
@@ -145,14 +136,6 @@ sub {
 
 sup {
   top: -0.5em;
-}
-
-p {
-  margin-block-end: 0px;
-  margin-block-start: 0px;
-  margin-inline-end: 0px;
-  margin-inline-start: 0px;
-  padding-inline-start: 0px;
 }
 
 /* Embedded content
