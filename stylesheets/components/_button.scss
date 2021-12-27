@@ -1,3 +1,38 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
-// -----------------------------------------------------------------------------
+
+.button-space {
+  margin-top: 1em;
+}
+
+.button {
+  border-radius: 2em;
+  padding: 0.5em 1em;
+  text-align: center;
+}
+
+.contact-button {
+  @include button-filling($primary-color, $primary-color, white);
+  a:hover {
+    color: $primary-color;
+  }
+}
+
+.empty-button {
+  @include button-filling(transparent, $primary-color, $primary-color);
+  margin: 1em 1em 2em;
+  &:hover {
+    background: $primary-color;
+    color: #fff;
+  }
+}
+
+.filled-button {
+  @include button-filling($primary-color, $primary-color, white);
+  margin: 2em 1em;
+}
+
+.hero-button {
+  @include button-filling($background-color, $background-color, $primary-color);
+  font-size: 1.5em;
+}

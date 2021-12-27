@@ -1,3 +1,19 @@
 // -----------------------------------------------------------------------------
 // This file contains all @font-face declarations, if any.
 // -----------------------------------------------------------------------------
+h1 {
+  font-family: $heading-font-stack;
+  font-size: 5em;
+  margin: 0.3em;
+}
+
+h2 {
+  @extend h1;
+  font-size: 3em;
+  text-align: center;
+}
+
+h3 {
+  @extend h1;
+  font-size: 2em;
+}

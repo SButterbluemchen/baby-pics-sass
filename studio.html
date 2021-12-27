@@ -20,8 +20,8 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.icon in the root directory -->
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="stylesheets/vendors/_normalize.scss">
+  <link rel="stylesheet" href="stylesheets/main.css">
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -34,14 +34,16 @@
       <li><a href="index.html"><img src="img/logo.png" alt="Logo Baby Pics Photograph"></a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="apropos.html">A propos</a></li>
-      <li class="contact-button"><a href="contact.html">Contactez-moi</a></li>
+      <li class="contact-button button"><a href="contact.html">Contactez-moi</a></li>
   </ul>
   </nav>
   <main class="studio-main">
     <article class="studio-main-text">
       <h2>Le studio</h2>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet obcaecati magnam quas blanditiis a doloribus maiores sint necessitatibus! Ratione ipsam reprehenderit autem quisquam maxime nihil facere voluptatum libero commodi voluptate!</p>
-      <button class="studio-hero-button">Nous trouver</button>
+      <div class="button-space">
+        <a href="contact.html" class="studio-hero-button button">Nous trouver</a>
+      </div>
     </article>
   </main>
   <section class="container-studio-prez">
@@ -63,39 +65,40 @@
         <figure>
           <img src="img/logo.png" alt="Logo Photographie">
         </figure>
-        <div>
+        <p>
           Baby Pics<br>
           11 Rue de l'exemple
           59000 Lille
-          0636548595
+          0636548595<br>
           <a href="mailto:hello@babypics.com">hello@babypics.com</a>
-        </div>
+        </p>
       </article>
     </div>
   </section>
   <footer>
-    <article class="footer-address">
-      <figure>
-        <img src="img/logo.png" alt="Logo Photographie">
-      </figure>
-      <div>
-        Baby Pics<br>
-        11 Rue de l'exemple
-        59000 Lille
-        0636548595
-        <a href="mailto:hello@babypics.com">hello@babypics.com</a>
-      </div>
-    </article>
-    <article class="footer-copyright">
-      <p>&copy;copyright Baby Pics 2021</p>
-    </article>
-    <article class="footer-social">
-      <figure>
-        <img src="img/instagram_logo.png" alt="Logo facebook">
-        <img src="img/facebook_logo.png" alt="Logo instagram">
-        <img src="img/pinterest_logo.png" alt="Logo pinterest">
-      </figure>
-    </article>
-  </footer>
-</body>
-</html>
+    <footer>
+      <article class="footer-address">
+        <figure>
+          <img src="img/logo.png" alt="Logo Photographie">
+        </figure>
+        <p>
+          Baby Pics<br>
+          11 Rue de l'exemple
+          59000 Lille
+          0636548595<br>
+          <a href="mailto:hello@babypics.com">hello@babypics.com</a>
+        </p>
+      </article>
+      <article class="footer-copyright">
+        <p>&copy;copyright Baby Pics 2021</p>
+      </article>
+      <article class="footer-social">
+        <figure>
+          <img src="img/instagram_logo.png" alt="Logo facebook">
+          <img src="img/facebook_logo.png" alt="Logo instagram">
+          <img src="img/pinterest_logo.png" alt="Logo pinterest">
+        </figure>
+      </article>
+    </footer>
+  </body>
+  </html>

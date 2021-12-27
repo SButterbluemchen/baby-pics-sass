@@ -9,7 +9,7 @@
  */
 
  html {
-  line-height: 1.15; /* 1 */
+  line-height: 1.4; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
@@ -37,10 +37,7 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
+
 
 /* Grouping content
    ========================================================================== */
@@ -75,6 +72,7 @@ pre {
 
 a {
   background-color: transparent;
+  color: inherit;
 }
 
 /**
@@ -147,6 +145,10 @@ sup {
 
 img {
   border-style: none;
+}
+
+figure {
+  margin: 0em;
 }
 
 /* Forms

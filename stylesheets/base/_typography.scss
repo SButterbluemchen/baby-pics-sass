@@ -3,5 +3,23 @@
  */
 body {
   color: $text-color;
-  font: normal 125% / 1.4 $text-font-stack;
+  font: normal 100% / 1.4 $text-font-stack;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+nav li:hover,
+.hero-button:hover,
+.empty-button:hover,
+.filled-button:hover,
+.studio-hero-button:hover,
+.selector h2:hover,
+.footer-social img:hover {
+  transform: scale(105%);
+  transition-duration: 0.7s;
 }
