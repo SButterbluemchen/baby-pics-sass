@@ -1,0 +1,132 @@
+// -----------------------------------------------------------------------------
+// MAIN - IMAGE RIGHT & TEXT LEFT
+// -----------------------------------------------------------------------------
+
+.container-price-right {
+  display: grid;
+  @include grid-basic(2fr 1fr, 0.2fr 1fr, 0);
+  grid-template-areas:
+    "h2 h2"
+    "price-text-right price-img-right";
+  padding-bottom: 2em;
+  padding-top: 2em;
+  background: radial-gradient(
+    circle at 100%,
+    $primary-color 30%,
+    #ffffff 10%,
+    $background-color 75%
+  );
+  h2 {
+    
+    
+  }
+}
+
+.price-img-right {
+  grid-area: price-img-right;
+  filter: grayscale(20%);
+  width: 20vw;
+  img {
+    width: 100%;
+    margin: 1.5em;
+  }
+}
+
+.price-text-right {
+  grid-area: price-text-right;
+  text-align: right;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-end;
+  h3 {
+    display: flex;
+    align-items: flex-end;
+  }
+  p {
+    width: 85%;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// MAIN - IMAGE LEFT & TEXT RIGHT
+// -----------------------------------------------------------------------------
+
+.container-price-left {
+  display: grid;
+  @include grid-basic(1fr 2fr, 0.2fr 1fr, 0);
+  grid-template-areas:
+    "h3 h3"
+    "price-img-left price-text-left";
+  background: radial-gradient(
+    circle at 0%,
+    #ffffff 30%,
+    $primary-color 10%,
+    $background-color 95%
+  );
+}
+
+.price-img-left {
+  grid-area: price-img-left;
+  filter: grayscale(20%);
+  display: flex;
+  justify-content: flex-start;
+  img {
+    width: 60%;
+    margin-left: auto;
+    margin-right: 2em;
+  }
+}
+
+.price-text-left {
+  grid-area: price-text-left;
+  text-align: left;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-start;
+  h3 {
+    display: flex;
+    align-items: flex-end;
+    grid-area: h3;
+  }
+  p {
+    width: 85%;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// TARIFS
+// -----------------------------------------------------------------------------
+
+.price-table {
+  @include grid-basic(repeat(3, 1fr), 0.2fr 1fr, 0);
+  grid-template-areas:
+    "h2 h2 h2"
+    "price-article1 price-article2 price-article3";
+  text-align: center;
+  max-height: 120vh;
+  margin-bottom: 7em;
+  ul {
+    text-align: left;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.price-article1 {
+  @include price-article(price-article1);
+}
+
+.price-article2 {
+  @include price-article(price-article2);
+}
+
+.price-article3 {
+  @include price-article(price-article3);
+}
+
+.price {
+  background: $primary-color;
+  color: $background-color;
+  padding: 0.9em;
+}

@@ -1,0 +1,75 @@
+// -----------------------------------------------------------------------------
+// MAIN
+// -----------------------------------------------------------------------------
+
+.studio-main {
+  height: 100vh;
+  background: url(../img/studio-hero_bw.jpg) 30% no-repeat fixed;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.studio-main-text {
+  width: 33em;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  line-height: 2em;
+  background: rgba($background-color, 0.5);
+  padding: 3em;
+}
+
+// -----------------------------------------------------------------------------
+// Présentation
+// -----------------------------------------------------------------------------
+
+.container-studio-prez {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 0.2fr 1fr;
+  grid-template-areas:
+    "h2 h2"
+    "home-studio-text home-studio-img";
+  border: 0.2em solid $primary-color;
+  margin: 3em;
+  padding-bottom: 5em;
+}
+
+.home-studio-img {
+  grid-area: home-studio-img;
+  filter: grayscale(10%);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.home-studio-text {
+  grid-area: home-studio-text;
+  text-align: right;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-end;
+  p {
+    width: 90%;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Map
+// -----------------------------------------------------------------------------
+
+.google-maps-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.google-maps {
+  text-align: center;
+}
+
+.address {
+  display: flex;
+  width: 12vw;
+  flex-wrap: wrap;
+}

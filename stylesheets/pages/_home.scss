@@ -2,7 +2,7 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 
-  // -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 // MAIN
 // -----------------------------------------------------------------------------
 
@@ -11,11 +11,11 @@
   background: url(../img/home-hero_bw.jpg) 30% no-repeat fixed;
   display: flex;
   justify-content: flex-end;
-} 
+}
 
 .main-text {
   width: 25em;
-  color:#fff;
+  color: #fff;
   margin-right: 5em;
 }
 
@@ -25,11 +25,10 @@
 
 .container-home-prez {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 0.2fr 1fr;
-  grid-template-areas: 
-  "h2 h2"
-  "home-prez-img home-prez-text";
+  @include grid-basic(1fr 2fr, 0.2fr 1fr, 0);
+  grid-template-areas:
+    "h2 h2"
+    "home-prez-img home-prez-text";
   margin-bottom: 5em;
   border: 0.2em solid $primary-color;
   margin: 3em;
@@ -58,13 +57,12 @@
 
 .container-home-price {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.2fr 1fr;
-  grid-template-areas: 
-  "h2 h2 h2"
-  "price-pregnancy price-newborn price-baby";
+  @include grid-basic(repeat(3, 1fr), 0.2fr 1fr, 0, 2em);
+  grid-template-areas:
+    "h2 h2 h2"
+    "price-pregnancy price-newborn price-baby";
   text-align: center;
-  width: 98vw;
+  width: 90vw;
   margin: auto;
 }
 
@@ -74,27 +72,20 @@
 
 .price-pregnancy {
   grid-area: price-pregnancy;
-  padding: 0em 2em;
-  margin-bottom: 2em;
 }
 
 .price-newborn {
   grid-area: price-newborn;
-  padding: 0em 2em;
 }
 
 .price-baby {
   grid-area: price-baby;
-  padding: 0em 2em;
 }
 
-.container-home-price img,
-.container-home-price figure {
+.container-home-price figure,
+.container-home-price img {
   width: 100%;
-  margin: auto;
 }
-
-
 
 // -----------------------------------------------------------------------------
 // Blog
@@ -102,25 +93,23 @@
 
 .container-home-blog {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.2fr 0.5fr 0.5fr;
-  grid-template-areas: 
-  "h2"
-  "home-blog-article1"
-  "home-blog-article2";
+  @include grid-basic(1fr, 0.2fr 1fr, 2em, 0);
+  grid-template-areas:
+    "h2"
+    "home-blog-article1"
+    "home-blog-article2";
   margin: auto;
   width: 80vw;
-  row-gap: 2em;
 }
 
 .home-blog-article1 {
-  border: 0.2em solid #BF8C8C;
+  border: 0.2em solid #bf8c8c;
   grid-area: home-blog-article1;
   display: flex;
 }
 
 .home-blog-article2 {
-  border: 0.2em solid #BF8C8C;
+  border: 0.2em solid #bf8c8c;
   grid-area: home-blog-article2;
   display: flex;
 }

@@ -1,0 +1,89 @@
+// -----------------------------------------------------------------------------
+// MAIN
+// -----------------------------------------------------------------------------
+.about-main {
+  height: 100vh;
+  background: url(../img/photo-home-about.jpeg) 100% no-repeat fixed;
+  background-size: cover;
+  background-position: 0% 30%;
+  display: flex;
+  align-items: center;
+}
+
+.about-main-text {
+  max-width: 30em;
+  padding: 3em 2em;
+  margin: 2em;
+  background-color: rgba($background-color, 0.5);
+  text-align: center;
+  line-height: 2em;
+  &:after {
+    content: "";
+    width: 30em;
+    height: 20em;
+    display: block;
+    position: absolute;
+    top: 10em;
+    border: 0.2em solid $background-color;
+  }
+  &:hover:after {
+    content: "";
+    width: 30em;
+    height: 20em;
+    transform: translate(-2em, 8.5em);
+    transition: all 0.3s linear;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// ARTICLES
+// -----------------------------------------------------------------------------
+
+.about-articles {
+  display: flex;
+  margin: auto;
+  max-width: 90%;
+  gap: 2em;
+  margin-bottom: 5em;
+}
+
+.about-prez p {
+  text-align: justify;
+}
+
+.publications {
+  max-width: 80vw;
+  text-align: center;
+  margin: auto;
+  padding: 3em 0em;
+  border-top: 0.2em dotted $primary-color;
+  border-bottom: 0.2em dotted $primary-color;
+}
+
+// -----------------------------------------------------------------------------
+// INSTAGRAM
+// -----------------------------------------------------------------------------
+
+.instagram {
+  margin: auto;
+  text-align: center;
+  figure {
+      margin: auto;
+  }
+  img {
+    max-width: 15em;
+    flex-wrap: wrap;
+    display: flex;
+    justify-self: center;
+  }
+}
+
+.instagram-list {
+  display: flex;
+  flex-direction: row;
+  max-width: 90vw;
+  flex-wrap: wrap;
+  margin: auto;
+  row-gap: 1em;
+}
+

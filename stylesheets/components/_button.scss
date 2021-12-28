@@ -2,7 +2,7 @@
 // This file contains all styles related to the button component.
 
 .button-space {
-  margin-top: 1em;
+  margin-top: 1.5em;
 }
 
 .button {
@@ -32,7 +32,24 @@
   margin: 2em 1em;
 }
 
+.empty-button--white {
+  @include button-filling(transparent, $background-color, $background-color);
+  &:hover {
+    color: $primary-color;
+  }
+}
+
 .hero-button {
   @include button-filling($background-color, $background-color, $primary-color);
   font-size: 1.5em;
+}
+
+.selector h2 {
+  @include button-filling(linear-gradient(10deg, $primary-color 30%, rgba($background-color, 0.8)), $background-color, $background-color);
+  padding: 0em 1em;
+  border-radius: 0.1em;
+  &:hover {
+    background: rgba($background-color, 0.8);
+    color: $primary-color;
+  }
 }

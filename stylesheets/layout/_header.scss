@@ -7,6 +7,8 @@ nav {
   background: $background-color;
   width: 100vw;
   z-index: 1;
+  position: sticky;
+  top: 0px;
   ul {
     display: flex;
     justify-content: space-around;
