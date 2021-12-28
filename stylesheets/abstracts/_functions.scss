@@ -2,6 +2,12 @@
 // This file contains all application-wide Sass functions.
 // -----------------------------------------------------------------------------
 
+// grid gallery function
+@for $i from 1 through 6 {
+  .figure#{$i} {
+    grid-area: figure#{$i};
+  }
+}
 
 /*
 /// Native `url(..)` function wrapper

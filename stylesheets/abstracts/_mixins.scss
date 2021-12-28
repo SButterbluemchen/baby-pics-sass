@@ -11,3 +11,20 @@
     color: $background-color;
   }
 }
+
+@mixin grid-basic($col, $row, $row-gap: null, $column-gap: null) {
+  display: grid;
+  grid-template-columns: $col;
+  grid-template-rows: $row;
+  row-gap: $row-gap;
+  column-gap: $column-gap;
+}
+
+@mixin price-article($grid-area) {
+  grid-area: $grid-area;
+  margin: 0em 2.5em;
+  border: 0.2em solid $primary-color;
+  a {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,51 @@
+// -----------------------------------------------------------------------------
+// BLOG
+// -----------------------------------------------------------------------------
+
+.blog-container {
+  display: grid;
+  @include grid-basic(2fr 2fr 1fr, 25vh auto);
+  grid-template-areas:
+    "main-blog main-blog aside"
+    "blog-table blog-table aside";
+}
+
+.main-blog {
+  grid-area: main-blog;
+  display: flex;
+  margin: auto;
+}
+
+// -----------------------------------------------------------------------------
+// ASIDE
+// -----------------------------------------------------------------------------
+
+aside {
+  grid-area: aside;
+  text-align: left;
+  padding: 2em;
+  background: #faf1f0;
+  h4 {
+    color: $primary-color;
+  }
+}
+
+.blog-table {
+  grid-area: blog-table;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.blog-article {
+  border: 0.2em solid $primary-color;
+  margin-bottom: 3em;
+  text-align: center;
+  img {
+    width: 100%;
+  }
+  p {
+    padding: 1em;
+  }
+}
