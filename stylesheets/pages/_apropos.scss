@@ -25,6 +25,7 @@
     position: absolute;
     top: 10em;
     border: 0.2em solid $background-color;
+    display: none;
   }
   &:hover:after {
     content: "";
@@ -41,10 +42,13 @@
 
 .about-articles {
   display: flex;
-  margin: auto;
-  max-width: 90%;
+  max-width: 90vw;
   gap: 2em;
+  margin: auto;
   margin-bottom: 5em;
+  @include mobile-only {
+    flex-direction: column;
+  }
 }
 
 .about-prez p {

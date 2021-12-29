@@ -119,7 +119,7 @@
 // -----------------------------------------------------------------------------
 
 .price-table {
-  @include grid-basic(repeat(3, 1fr), 0.2fr 1fr, 0);
+  @include grid-basic(repeat(3, auto), 0.2fr auto, 0);
   grid-template-areas:
     "h2 h2 h2"
     "price-article1 price-article2 price-article3";

@@ -8,6 +8,12 @@
   grid-template-areas:
     "main-blog main-blog aside"
     "blog-table blog-table aside";
+  @include mobile-only {
+    grid-template-areas: 
+    "main-blog"
+    "blog-table"
+    "aside";
+  }
 }
 
 .main-blog {

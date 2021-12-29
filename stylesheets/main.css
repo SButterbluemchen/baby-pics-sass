@@ -552,24 +552,35 @@ nav ul {
   margin: 0px;
 }
 
+@media screen and (max-width: 599px) {
+  nav ul {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-column-gap: 1em;
+            column-gap: 1em;
+    padding-bottom: 1em;
+  }
+  nav ul :nth-child(4) {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
+
 nav li {
   list-style: none;
 }
 
 nav a {
   font-size: 1.2em;
-}
-
-@media screen and (max-width: 600px) {
-  nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    width: 95%;
-    margin: auto;
-  }
 }
 
 .container-home-prez h2,
@@ -585,7 +596,52 @@ nav a {
   grid-area: h2;
 }
 
-.footer-wrapper {
+/*.footer-wrapper {
+  text-align: center;
+  background: $primary-color;
+  color: $background-color;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 3em;
+  margin-top: 2em;
+  @include mobile-only-flex-center {
+  }
+}
+
+.footer-social {
+  filter: brightness(0) invert(1);
+  img {
+    padding: 1em;
+    width: 5em;
+  }
+}
+
+.footer-address {
+  filter: brightness(0) invert(1);
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  width: 40vh;
+  padding-bottom: 1.5em;
+  figure {
+    margin: 0em;
+    img {
+      text-align: inherit;
+    }
+  }
+  @include mobile-only-flex-center {
+    text-align: center;
+  }
+}
+
+.footer-copyright {
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+  background: $primary-color;
+  color: $background-color;
+}*/
+footer {
   text-align: center;
   background: #BF8C8C;
   color: #ffffff;
@@ -600,7 +656,7 @@ nav a {
 }
 
 @media screen and (max-width: 599px) {
-  .footer-wrapper {
+  footer {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     display: -webkit-box;
@@ -670,8 +726,16 @@ nav a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #BF8C8C;
-  color: #ffffff;
+}
+
+@media screen and (max-width: 599px) {
+  .footer-copyright {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 
 .button-space {
@@ -1109,7 +1173,7 @@ nav a {
 
 .google-maps-content iframe {
   width: 50vw;
-  height: 70vh;
+  min-height: 70vh;
 }
 
 @media screen and (max-width: 599px) {
@@ -1378,10 +1442,10 @@ nav a {
 .price-table {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: 0.2fr 1fr;
-      grid-template-rows: 0.2fr 1fr;
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
+  -ms-grid-rows: 0.2fr auto;
+      grid-template-rows: 0.2fr auto;
   row-gap: 0;
       grid-template-areas: "h2 h2 h2" "price-article1 price-article2 price-article3";
   text-align: center;
@@ -1454,6 +1518,14 @@ nav a {
   -ms-grid-rows: 25vh auto;
       grid-template-rows: 25vh auto;
       grid-template-areas: "main-blog main-blog aside" "blog-table blog-table aside";
+}
+
+@media screen and (max-width: 599px) {
+  .blog-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "main-blog" "blog-table" "aside";
+  }
 }
 
 .main-blog {
@@ -1541,6 +1613,7 @@ aside h4 {
   position: absolute;
   top: 10em;
   border: 0.2em solid #ffffff;
+  display: none;
 }
 
 .about-main-text:hover:after {
@@ -1557,10 +1630,21 @@ aside h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: auto;
-  max-width: 90%;
+  max-width: 90vw;
   gap: 2em;
+  margin: auto;
   margin-bottom: 5em;
+}
+
+@media screen and (max-width: 599px) {
+  .about-articles {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .about-prez p {
@@ -1615,8 +1699,15 @@ aside h4 {
   margin: auto;
 }
 
+@media screen and (max-width: 599px) {
+  .main-contact {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    max-width: 80%;
+  }
+}
+
 form {
-  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1630,12 +1721,20 @@ form {
   max-width: 60%;
   border: 0.2em solid #BF8C8C;
   padding: 2em;
-  margin-top: 2em;
+  margin: 2em auto;
 }
 
 form div {
   width: 100%;
   padding: 0.5em;
+}
+
+@media screen and (max-width: 599px) {
+  form {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    max-width: 80%;
+  }
 }
 
 .form-element {

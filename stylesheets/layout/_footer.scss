@@ -1,7 +1,7 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
-.footer-wrapper {
+/*.footer-wrapper {
   text-align: center;
   background: $primary-color;
   color: $background-color;
@@ -45,4 +45,52 @@
   justify-content: center;
   background: $primary-color;
   color: $background-color;
+}*/
+
+footer {
+  text-align: center;
+  background: $primary-color;
+  color: $background-color;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 3em;
+  margin-top: 2em;
+  @include mobile-only-flex-center {
+    
+  }
+}
+
+.footer-social {
+  filter: brightness(0) invert(1);
+  img {
+    padding: 1em;
+    width: 5em;
+  }
+}
+
+.footer-address {
+  filter: brightness(0) invert(1);
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  width: 40vh;
+  padding-bottom: 1.5em;
+  figure {
+    margin: 0em;
+    img {
+      text-align: inherit;
+    }
+  }
+  @include mobile-only-flex-center {
+    text-align: center;
+  }
+}
+
+.footer-copyright {
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+  @include mobile-only {
+    order: 1;
+  }
 }
