@@ -11,7 +11,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 35vh;
+  height: 45vh;
+}
+
+@media screen and (max-width: 600px) {
+  .selector {
+    display: flex; 
+    flex-wrap: wrap;
+  }
 }
 
 // -----------------------------------------------------------------------------
@@ -41,4 +48,14 @@
     height: 100%;
     border: 0.2em solid $background-color;
   }
+  @include mobile-only {
+    grid-template-rows: 6fr;
+    grid-template-areas: 
+    "figure1"
+    "figure2"
+    "figure3"
+    "figure4"
+    "figure5"
+    "figure6"
+  };
 }

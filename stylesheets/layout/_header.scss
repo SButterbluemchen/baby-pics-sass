@@ -2,7 +2,6 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 
-
 nav {
   background: $background-color;
   width: 100vw;
@@ -18,7 +17,18 @@ nav {
   li {
     list-style: none;
   }
-    a {
-      font-size: 1.2em;
+  a {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      width: 95%;
+      margin: auto;
     }
+  }
 }

@@ -16,9 +16,11 @@
     #ffffff 10%,
     $background-color 75%
   );
-  h2 {
-    
-    
+  @include mobile-only {
+    grid-template-areas:
+      "h2"
+      "price-img-right"
+      "price-text-right";
   }
 }
 
@@ -26,6 +28,9 @@
   grid-area: price-img-right;
   filter: grayscale(20%);
   width: 20vw;
+  @include mobile-only {
+    width: 90%;
+  }
   img {
     width: 100%;
     margin: 1.5em;
@@ -45,6 +50,10 @@
   p {
     width: 85%;
   }
+  @include mobile-only {
+    justify-content: center;
+    text-align: justify;
+  }
 }
 
 // -----------------------------------------------------------------------------
@@ -63,17 +72,25 @@
     $primary-color 10%,
     $background-color 95%
   );
+  @include mobile-only {
+    grid-template-areas:
+      "h2"
+      "price-img-left"
+      "price-text-left";
+  }
 }
 
 .price-img-left {
   grid-area: price-img-left;
   filter: grayscale(20%);
-  display: flex;
-  justify-content: flex-start;
+  width: 20vw;
+  margin-left: auto;
+  margin-right: 2em;
+  @include mobile-only {
+    width: 90%;
+  }
   img {
-    width: 60%;
-    margin-left: auto;
-    margin-right: 2em;
+    width: 100%;
   }
 }
 
@@ -91,6 +108,10 @@
   p {
     width: 85%;
   }
+  @include mobile-only {
+    justify-content: center;
+    text-align: justify;
+  }
 }
 
 // -----------------------------------------------------------------------------
@@ -103,13 +124,18 @@
     "h2 h2 h2"
     "price-article1 price-article2 price-article3";
   text-align: center;
-  max-height: 120vh;
-  margin-bottom: 7em;
   ul {
     text-align: left;
   }
   img {
     width: 100%;
+  }
+  @include mobile-only {
+    grid-template-areas: 
+    "h2"
+    "price-article1"
+    "price-article2"
+    "price-article3"
   }
 }
 

@@ -32,7 +32,13 @@
   margin-bottom: 5em;
   border: 0.2em solid $primary-color;
   margin: 3em;
-  padding-bottom: 5em;
+  padding-bottom: 2em;
+  @include mobile-only-flex-center {
+    grid-template-areas:
+      "h2"
+      "home-prez-img"
+      "home-prez-text";
+  }
 }
 
 .home-prez-img {
@@ -57,13 +63,20 @@
 
 .container-home-price {
   display: grid;
-  @include grid-basic(repeat(3, 1fr), 0.2fr 1fr, 0, 2em);
+  @include grid-basic(repeat(3, 1fr), 0.2fr auto, 0, 2em);
   grid-template-areas:
     "h2 h2 h2"
     "price-pregnancy price-newborn price-baby";
   text-align: center;
   width: 90vw;
   margin: auto;
+  @include mobile-only {
+    grid-template-areas:
+      "h2"
+      "price-pregnancy"
+      "price-newborn"
+      "price-baby";
+  }
 }
 
 .container-home-price p {
@@ -106,18 +119,31 @@
   border: 0.2em solid #bf8c8c;
   grid-area: home-blog-article1;
   display: flex;
+  @include mobile-only {
+    flex-wrap: wrap;
+    text-align: center;
+  }
 }
 
 .home-blog-article2 {
   border: 0.2em solid #bf8c8c;
   grid-area: home-blog-article2;
   display: flex;
+  @include mobile-only {
+    flex-wrap: wrap;
+    text-align: center;
+  }
 }
 
 .container-home-blog img,
 .container-home-blog figure {
   width: 20em;
   height: 17em;
+  object-fit: cover;
+  @include mobile-only {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .home-blog-text {
