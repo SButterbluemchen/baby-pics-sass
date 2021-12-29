@@ -564,6 +564,7 @@ nav ul {
             justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    padding: 0em;
     -webkit-column-gap: 1em;
             column-gap: 1em;
     padding-bottom: 1em;
@@ -853,7 +854,7 @@ footer {
 }
 
 .home-main {
-  height: 100vh;
+  min-height: 100vh;
   background: url(../img/home-hero_bw.jpg) 30% no-repeat fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -867,10 +868,7 @@ footer {
   .home-main {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    background-position: -58em -10em;
+    background-position: -20em -15em;
   }
 }
 
@@ -878,6 +876,26 @@ footer {
   width: 25em;
   color: #fff;
   margin-right: 5em;
+}
+
+@media screen and (max-width: 599px) {
+  .main-text {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin: 0 auto;
+    max-width: 90%;
+    font-size: 90%;
+  }
 }
 
 .container-home-prez {
@@ -1605,6 +1623,14 @@ aside h4 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 599px) {
+  .about-main {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    background-position: 30% 10%;
+  }
 }
 
 .about-main-text {

@@ -7,13 +7,12 @@
 // -----------------------------------------------------------------------------
 
 .home-main {
-  height: 100vh;
+  min-height: 100vh;
   background: url(../img/home-hero_bw.jpg) 30% no-repeat fixed;
   display: flex;
   justify-content: flex-end;
   @include mobile-only {
-    justify-content: flex-start;
-    background-position: -58em -10em;
+    background-position: -20em -15em;
   }
 }
 
@@ -21,6 +20,14 @@
   width: 25em;
   color: #fff;
   margin-right: 5em;
+  @include mobile-only {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 auto;
+    max-width: 90%;
+    font-size: 90%;
+  }
 }
 
 // -----------------------------------------------------------------------------

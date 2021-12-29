@@ -8,6 +8,9 @@
   background-position: 0% 30%;
   display: flex;
   align-items: center;
+  @include mobile-only {
+    background-position: 30% 10%;
+  }
 }
 
 .about-main-text {

@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Sina Brauch
 
 # THANKS
 
-    Thanks to Pexels, google fonts, flaticon and Julien.
+    Thanks to Pexels, google fonts, flaticon, Hachemi and Julien.
 
 # TECHNOLOGY COLOPHON
 

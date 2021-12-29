@@ -14,6 +14,7 @@ nav {
     align-items: center;
     margin: 0px;
     @include mobile-only-flex-center {
+      padding: 0em;
       column-gap: 1em;
       padding-bottom: 1em;
       :nth-child(4) {
