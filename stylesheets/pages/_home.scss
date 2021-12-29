@@ -11,6 +11,10 @@
   background: url(../img/home-hero_bw.jpg) 30% no-repeat fixed;
   display: flex;
   justify-content: flex-end;
+  @include mobile-only {
+    justify-content: flex-start;
+    background-position: -58em -10em;
+  }
 }
 
 .main-text {

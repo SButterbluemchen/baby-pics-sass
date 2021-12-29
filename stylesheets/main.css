@@ -863,6 +863,17 @@ footer {
           justify-content: flex-end;
 }
 
+@media screen and (max-width: 599px) {
+  .home-main {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    background-position: -58em -10em;
+  }
+}
+
 .main-text {
   width: 25em;
   color: #fff;
